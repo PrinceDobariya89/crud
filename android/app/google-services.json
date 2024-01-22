@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712841858126",
+    "project_id": "recipe-app-rnw",
+    "storage_bucket": "recipe-app-rnw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712841858126:android:d412f29ca774a74836071f",
+        "android_client_info": {
+          "package_name": "com.example.test_rnw"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxBhVCD6crUai7OgPpjUxb9xeHcZAu4dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
