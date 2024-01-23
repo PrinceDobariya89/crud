@@ -14,14 +14,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3)).then((value) => Get.offAndToNamed(homeScreen));
+    Future.delayed(const Duration(seconds: 3)).then((value) => Get.offAndToNamed(homeScreen));
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Text('Splash Screen'),
+        child: Image(image: AssetImage('assets/splash.png')),
       ),
     );
   }

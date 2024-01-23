@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,13 +27,17 @@ class MyApp extends StatelessWidget {
       title: 'Recipe App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFC43939)),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),
+          bodyMedium: TextStyle(fontSize: 14),
+        ),
         useMaterial3: true,
       ),
       home: const SplashScreen(),
       getPages: [
         GetPage(name: splashScreen, page: () => const SplashScreen()),
-        GetPage(name: homeScreen, page: () => const HomeScreen()),
-        GetPage(name: likedScreen, page: () => const LikedRecipeScreen())
+        GetPage(name: homeScreen, page: () => HomeScreen()),
+        GetPage(name: likedScreen, page: () => LikedRecipeScreen())
       ],
     );
   }

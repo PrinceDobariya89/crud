@@ -16,8 +16,9 @@ class RecipeController extends GetxController {
   }
 
   void toggleLike(int id) {
-    int index = recipeList.firstWhere((p0) => p0.id == id).id!;
-    if (recipeList[index].id == 1) {
+    bool liked = recipeList.firstWhere((p0) => p0.id == id).isLiked == 1;
+    print(liked);
+    if (liked) {
       isLiked.value = 0;
       DBHelper.updateLiked(0, id);
     } else {
@@ -29,6 +30,11 @@ class RecipeController extends GetxController {
 
   void getRecipe() async {
     recipeList.value = await DBHelper.getRecipe();
+  }
+
+  void deleteRecipe(int id){
+    DBHelper.deleteRecipe(id);
+    getRecipe();
   }
 
   @override
